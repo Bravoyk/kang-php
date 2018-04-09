@@ -1,8 +1,8 @@
-#kang-php
+# kang-php
 This is my own PHP framework.(Just for learning php-framework)
 
-##Description
+## Description
 It's based on composer.
 
-##Composer Packagist
+## Composer Packagist
 route : [noahbuscher/macaw]('https://packagist.org/packages/noahbuscher/macaw')
