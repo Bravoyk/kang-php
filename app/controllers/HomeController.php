@@ -1,7 +1,13 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: bravo
- * Date: 2018/4/10
- * Time: 12:20 AM
+ *  HomeController
  */
+//use BaseController;
+
+class HomeController extends BaseController
+{
+	public function home()
+	{
+		echo '<h1>访问成功</h1>';
+	}
+}
