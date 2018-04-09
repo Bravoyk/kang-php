@@ -1,6 +1,7 @@
 {
   "require":{
-    "noahbuscher/macaw": "dev-master"
+    "noahbuscher/macaw": "dev-master",
+    "illuminate/database": "*"
   },
   "autoload":{
     "classmap":[
