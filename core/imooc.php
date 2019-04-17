@@ -22,7 +22,6 @@ class imooc
 		$ctrlfile = APP . '/ctrl/' . $ctrlClass . 'Ctrl.php';
 		$cltrClass = '\\' . MODULE . '\ctrl\\' . $ctrlClass . 'Ctrl';
 
-		log::log('ctrl:'.$ctrlClass.' action:'.$action);
 
 		if (is_file($ctrlfile)) {
 			include $ctrlfile;
