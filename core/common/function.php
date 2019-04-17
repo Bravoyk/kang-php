@@ -17,3 +17,7 @@ if (!function_exists('dd')) {
 	}
 
 }
+
+function vd($arg){
+	var_dump($arg);
+}
