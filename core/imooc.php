@@ -2,6 +2,7 @@
 
 namespace core;
 
+use core\lib\log;
 use core\lib\route;
 
 class imooc
@@ -11,14 +12,17 @@ class imooc
 
 	static public function run()
 	{
+
+		log::init();
+
 		$route = new route("test");
 
 		$ctrlClass = $route->ctrl;
 		$action    = $route->action;
-
 		$ctrlfile = APP . '/ctrl/' . $ctrlClass . 'Ctrl.php';
-
 		$cltrClass = '\\' . MODULE . '\ctrl\\' . $ctrlClass . 'Ctrl';
+
+		log::log('ctrl:'.$ctrlClass.' action:'.$action);
 
 		if (is_file($ctrlfile)) {
 			include $ctrlfile;

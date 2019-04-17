@@ -25,7 +25,7 @@ class route
 				unset($pathArray[1]);
 
 			} else {
-				$this->action = 'index';
+				$this->action = conf::get('ACTION','route');
 			}
 
 			// 多余部分变成 get 参数
@@ -34,16 +34,14 @@ class route
 
 			while($i < $count){
 				if (isset($pathArray[$i + 1])) {
-
-
 					$_GET[$pathArray[$i]] = $pathArray[$i + 1];
 				}
 				$i += 2;
 			}
 
 		} else {
-			$this->ctrl   = 'index';
-			$this->action = 'index';
+			$this->ctrl   = conf::get('CTRL','route');;
+			$this->action = conf::get('ACTION','route');;
 		}
 
 	}

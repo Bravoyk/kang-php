@@ -6,12 +6,9 @@ class model extends \PDO
 {
 	public function __construct()
 	{
-		$dsn      = "mysql:host=localhost;dbname=codehero";
-		$username = 'codehero';
-		$passwd   = 'codehero';
-
+		$database = conf::all('database');
 		try{
-			parent::__construct($dsn, $username, $passwd);
+			parent::__construct($database['DSN'], $database['USERNAME'], $database['PASSWD']);
 		}catch(\PDOException $e){
 			vd($e->getMessage());
 		}
