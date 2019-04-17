@@ -1,7 +1,8 @@
 <?php
 define('IMOOC', realpath('../'));
-define('CORE', realpath('../core'));
-define('APP', realpath('/app'));
+define('CORE', IMOOC.'/core');
+define('APP', IMOOC.'/app');
+define('MODULE', 'app');
 
 define('DEBUG', true);
 
